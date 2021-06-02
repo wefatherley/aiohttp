@@ -146,7 +146,6 @@ html_theme = "aiohttp_theme"
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "logo": "aiohttp-icon-128x128.png",
     "description": "Async HTTP client/server for asyncio and Python",
     "canonical_url": "http://docs.aiohttp.org/en/stable/",
     "github_user": "aio-libs",
@@ -188,6 +187,10 @@ html_theme_options = {
     ],
 }
 
+html_css_files = [
+    "css/logo-adjustments.css",
+]
+
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = [alabaster.get_path()]
 
@@ -200,7 +203,7 @@ html_theme_options = {
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = 'aiohttp-icon.svg'
+html_logo = "aiohttp-plain.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -352,4 +355,23 @@ texinfo_documents = [
 nitpick_ignore = [
     ("py:mod", "aiohttp"),  # undocumented, no `.. currentmodule:: aiohttp` in docs
     ("py:class", "aiohttp.SimpleCookie"),  # undocumented
+    ("py:class", "aiohttp.web.RequestHandler"),  # undocumented
+    ("py:class", "aiohttp.NamedPipeConnector"),  # undocumented
+    ("py:meth", "aiohttp.ClientSession.request"),  # undocumented
+    ("py:class", "aiohttp.protocol.HttpVersion"),  # undocumented
+    ("py:class", "aiohttp.ClientRequest"),  # undocumented
+    ("py:class", "aiohttp.payload.Payload"),  # undocumented
+    ("py:class", "aiohttp.abc.AbstractResolver"),  # undocumented
+    ("py:func", "aiohttp.ws_connect"),  # undocumented
+    ("py:meth", "start"),  # undocumented
+    ("py:exc", "aiohttp.ServerDisconnectionError"),  # undocumented
+    ("py:exc", "aiohttp.ClientHttpProxyError"),  # undocumented
+    ("py:class", "asyncio.AbstractServer"),  # undocumented
+    ("py:mod", "aiohttp.test_tools"),  # undocumented
+    ("py:class", "list of pairs"),  # undocumented
+    ("py:class", "aiohttp.protocol.HttpVersion"),  # undocumented
+    ("py:meth", "aiohttp.ClientSession.request"),  # undocumented
+    ("py:class", "aiohttp.StreamWriter"),  # undocumented
+    ("py:obj", "logging.DEBUG"),  # undocumented
+    ("py:class", "aiohttp.abc.AbstractAsyncAccessLogger"),  # undocumented
 ]
